@@ -12,7 +12,7 @@ export default StyleSheet.create({
   datesStrip: {
     flexDirection: "row",
     flex: 1,
-    alignItems: "center",
+    alignItems: "flex-end",
     justifyContent: "space-between"
   },
   calendarDates: {
