@@ -23,9 +23,9 @@ class CalendarHeader extends Component {
     onHeaderSelected: PropTypes.func,
   };
 
-  shouldComponentUpdate(nextProps) {
-    return JSON.stringify(this.props) !== JSON.stringify(nextProps);
-  }
+  // shouldComponentUpdate(nextProps) {
+  //   return JSON.stringify(this.props) !== JSON.stringify(nextProps);
+  // }
 
   //Function that formats the calendar header
   //It also formats the month section if the week is in between months

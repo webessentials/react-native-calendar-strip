@@ -154,6 +154,21 @@ class CalendarStrip extends Component {
     this.layout = {};
   }
 
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
+    const {locale} = nextProps;
+    if (locale && locale.name && locale.config) {
+      moment.updateLocale(locale.name, locale.config);
+    }
+
+    if (nextState.weekStartDate) {
+      this.setState({weekStartDate: this.setLocale(nextState.weekStartDate)})
+    }
+
+    if (nextState.weekEndDate) {
+      this.setState({weekEndDate: this.setLocale(nextState.weekEndDate)})
+    }
+  }
+
   //Receiving props and set date states, minimizing state updates.
   componentDidUpdate(prevProps, prevState) {
     let startingDate = {};
