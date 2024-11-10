@@ -10,9 +10,10 @@ export default StyleSheet.create({
     overflow: "hidden"
   },
   datesStrip: {
+    paddingTop: 40,
     flexDirection: "row",
     flex: 1,
-    alignItems: "flex-end",
+    alignItems: "center",
     justifyContent: "space-between"
   },
   calendarDates: {
